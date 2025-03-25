@@ -1,0 +1,50 @@
+Credit card fraud detection project:
+
+1. This project aims to detect the fraud in the credit card details.
+2. In this dataset, transaction details are highly imbalanced. So, we used "Under Sampling Method" to resolve the problems.
+
+3. Work flow:
+
+credit card data----> Data preprocessing ------> Data Analysis-----> Train test split----->LogisticRegression ---->Evaluation
+
+4. Import dependencies.
+
+Data preprocessing:
+5. Load the dataset from a CSV file into a Pandas dataframe. Print the first and last five rows of the dataset. 
+5.1 In the dataset, time is presented in seconds
+5.2 In this dataset, all the features are converted into numeric for security purposes.
+5.3 If the transaction is normal(ligit)distribution, then the value is 0.
+5.4 If the transaction is fraudulent distribution, then the value is 1.
+5.5 get some basic information about the dataset.
+5.6 Check the missing values in the data set.
+5.7 Check that how the classes are distributed.[Distribution of the normal and fraudulent transactions]
+5.8 After finding that, the dataset is highly imbalanced. In this situation, if we create  the ML model, it can't recognize the fraudulent data. because it is too small.
+5.9 separating the normal and fraud transactions to analyse the data.
+5.10 statistical measures of the data for the Amount columns.
+5.11 Compare the values for both transactions.
+
+6. Under Sampling:
+Process:
+6.1 Take the random sample of the data.
+6.2 Build a sample dataset containing similar distribution of normal(fraud) distributions.
+6.3 Take the sample data in normal distribution and add it to the fraud transaction. Now, we have good dataset.
+6.4 Concatenating the two dataframes
+6.5 Cross verify the values in two distributions
+
+7. Define the feature and targeted data
+
+8. Split the data into training and testing.
+
+9. I have used 3 models: 
+9.1 LogisticRegression
+9.2 SVC
+9.3 DecisionTree
+
+10. Evaluation score:
+10.1 Accuracy score for testing data:  0.949238578680203 by using the LogisticRegression.
+10.2 Accuracy score for testing data:  0.949238578680203 by using the SVC.
+10.3 Accuracy score for testing data:  0.9238578680203046 by using the DecisionTree.
+
+
+
+
